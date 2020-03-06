@@ -1,0 +1,26 @@
+<div class="grid-toolbar-container">
+  <app-toggle-button
+    (changed)="onSelectionModeChanged($event)"
+    label="Selection mode"
+    >
+  </app-toggle-button>
+  <span>Selected records {{selectedCount}}</span>
+  <span>Records {{recordsPerPage}} / {{totalRecords}}</span>
+</div>
+<ag-grid-angular
+  #agGrid
+  style="width: 900px; height: 400px;"
+  class="ag-theme-balham"
+  (gridReady)="onGridReady($event)"
+  [rowData]="rowData"
+  [columnDefs]="columnDefs"
+  (rowDataChanged)="onRowDataChanged($event)"
+  rowSelection='multiple'
+  [gridOptions]="gridOptions"
+  [modules]="modules"
+  >
+</ag-grid-angular>
+
+
+
+

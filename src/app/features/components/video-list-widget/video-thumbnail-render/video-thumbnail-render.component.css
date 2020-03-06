@@ -1,0 +1,9 @@
+.video-thumbnail-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
